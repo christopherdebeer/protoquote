@@ -6,9 +6,9 @@
 // Load
 window.bookmarklet = (function(opts){fullFunc(opts)})({
     css : [pqBase + "protoquote.css"],
-    js  : [pqBase + "protoquote.js", pqBase + "rangy.min.js" ],
+    js  : [pqBase + "protoquote.js", pqBase + "rangy-core.js" ],
     ready : function() {
-
+        
         // Start the show.
         protoquote.init();
         
