@@ -10,7 +10,10 @@ window.bookmarklet = (function(opts){fullFunc(opts)})({
     ready : function() {
         
         // Start the show.
-        protoquote.init();
+        
+        var selectedText = false
+        selectedText = rangy.getSelection()
+        if (selectedText) {alert(selectedText)}
         
     }
 });
