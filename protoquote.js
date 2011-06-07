@@ -1,0 +1,3 @@
+var protoquote = {
+    init: function () {}
+}
