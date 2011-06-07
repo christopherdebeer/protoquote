@@ -11,9 +11,17 @@ window.bookmarklet = (function(opts){fullFunc(opts)})({
         
         // Start the show.
         
-        var selectedText = false
-        selectedText = rangy.getSelection()
-        if (selectedText) {alert(selectedText)}
+        var range = rangy.createRange()
+
+        // All DOM Range methods and properties supported
+        range.selectNodeContents(document.body)
+        
+        // Selection object based on those in Mozilla, WebKit and Opera
+        var sel = rangy.getSelection()
+        sel.removeAllRanges()
+        sel.addRange(range)
+        
+        alert(sel)
         
     }
 });
